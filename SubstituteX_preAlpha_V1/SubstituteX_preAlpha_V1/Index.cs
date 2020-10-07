@@ -100,8 +100,6 @@ namespace SubstituteX_preAlpha_V1
             MessageBox.Show("Done!");
         }
 
-        
-
         #endregion
 
         #region SchedulingRegion
