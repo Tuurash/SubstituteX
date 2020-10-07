@@ -122,6 +122,7 @@
             this.btnStopSchedule.Size = new System.Drawing.Size(44, 23);
             this.btnStopSchedule.TabIndex = 5;
             this.btnStopSchedule.Text = "Stop";
+            this.btnStopSchedule.Click += new System.EventHandler(this.btnStopSchedule_Click);
             // 
             // btnStartSchedule
             // 
@@ -217,6 +218,10 @@
             this.lblServerName.TabIndex = 2;
             this.lblServerName.Text = "Server";
             this.lblServerName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // BackupTimer
+            // 
+            this.BackupTimer.Tick += new System.EventHandler(this.BackupTimer_Tick);
             // 
             // Index
             // 

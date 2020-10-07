@@ -19,6 +19,7 @@ namespace SubstituteX_preAlpha_V1
         string serverName = "";
         string databaseName = "";
         int Interval = 0;
+
         public Index()
         {
             InitializeComponent();
@@ -36,6 +37,8 @@ namespace SubstituteX_preAlpha_V1
             return "";
         }
 
+        #region BackupRegion
+
         public SqlConnection Connection()
         {
             char trimChars = '"';
@@ -47,9 +50,9 @@ namespace SubstituteX_preAlpha_V1
             }
             else
             {
-                connectionString =@txtCustomString.Text+";";
+                connectionString = @txtCustomString.Text + ";";
                 serverName = getBetween(connectionString, "Source=", "; Integrated").Trim(trimChars);
-                databaseName= getBetween(connectionString, "Catalog=", ";").Trim(trimChars);
+                databaseName = getBetween(connectionString, "Catalog=", ";").Trim(trimChars);
             }
             return new SqlConnection(connectionString);
         }
@@ -79,21 +82,29 @@ namespace SubstituteX_preAlpha_V1
             }
             return dt;
         }
-        private void btnBackup_Click(object sender, EventArgs e)
+
+        private void CreateBackup()
         {
             Connection();
             DateTime d = DateTime.Now;
-            string dd = d.Day + "." + d.Month;
+            string dd = d.Day + "." + d.Month+"."+d.Second;
             string query_1 = "use " + databaseName + ";";
-            string query_2 = @"BACKUP DATABASE " + databaseName + " To DISK= 'D:\\DatabaseBackups\\"+databaseName+" _" + dd + ".bak' with format,Medianame='Z_SQLServerBackups',Name='FullBackUp_" + databaseName + "';";
+            string query_2 = @"BACKUP DATABASE " + databaseName + " To DISK= 'D:\\DatabaseBackups\\" + databaseName + " _" + dd + ".bak' with format,Medianame='Z_SQLServerBackups',Name='FullBackUp_" + databaseName + "';";
 
             ExecuteNonQuery(query_1);
             ExecuteNonQuery(query_2);
-
+        }
+        private void btnBackup_Click(object sender, EventArgs e)
+        {
+            CreateBackup();
             MessageBox.Show("Done!");
-            
         }
 
+        
+
+        #endregion
+
+        #region SchedulingRegion
         private void btnScheduler_Click(object sender, EventArgs e)
         {
             PanelSecheduler.Visible = true;
@@ -104,7 +115,25 @@ namespace SubstituteX_preAlpha_V1
             Interval = int.Parse(txtInterval.Text);
             BackupTimer.Interval = Interval * 60000;
             lblSchedulerStatus.Text = "Running";
+            BackupTimer.Start();
 
         }
+
+        private void BackupTimer_Tick(object sender, EventArgs e)
+        {
+            CreateBackup();
+        }
+
+        private void btnStopSchedule_Click(object sender, EventArgs e)
+        {
+            BackupTimer.Stop();
+            lblSchedulerStatus.Text = "Not Running.";
+            lblSchedulerStatus.ForeColor = System.Drawing.Color.Red;
+            PanelSecheduler.Visible = false;
+        }
+
+        #endregion
+
+
     }
 }
