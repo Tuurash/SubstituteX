@@ -32,7 +32,6 @@ namespace SubstituteX_preAlpha_V1
                 End = strSource.IndexOf(strEnd, Start);
                 return strSource.Substring(Start, End - Start);
             }
-
             return "";
         }
 
