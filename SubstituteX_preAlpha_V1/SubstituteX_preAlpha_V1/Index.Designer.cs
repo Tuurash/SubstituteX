@@ -33,8 +33,10 @@
             this.btnBackup = new System.Windows.Forms.Button();
             this.txtDBName = new MetroFramework.Controls.MetroTextBox();
             this.txtServerName = new MetroFramework.Controls.MetroTextBox();
-            this.lblDBname = new MetroFramework.Controls.MetroLabel();
             this.lblServerName = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.txtCustomString = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,10 +49,12 @@
             // 
             // metroPanel1
             // 
+            this.metroPanel1.Controls.Add(this.metroLabel2);
+            this.metroPanel1.Controls.Add(this.txtCustomString);
+            this.metroPanel1.Controls.Add(this.metroLabel1);
             this.metroPanel1.Controls.Add(this.btnBackup);
             this.metroPanel1.Controls.Add(this.txtDBName);
             this.metroPanel1.Controls.Add(this.txtServerName);
-            this.metroPanel1.Controls.Add(this.lblDBname);
             this.metroPanel1.Controls.Add(this.lblServerName);
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
@@ -66,7 +70,7 @@
             // btnBackup
             // 
             this.btnBackup.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnBackup.Location = new System.Drawing.Point(255, 234);
+            this.btnBackup.Location = new System.Drawing.Point(322, 314);
             this.btnBackup.Name = "btnBackup";
             this.btnBackup.Size = new System.Drawing.Size(107, 41);
             this.btnBackup.TabIndex = 7;
@@ -76,39 +80,59 @@
             // 
             // txtDBName
             // 
-            this.txtDBName.Location = new System.Drawing.Point(232, 181);
+            this.txtDBName.Location = new System.Drawing.Point(197, 183);
             this.txtDBName.Name = "txtDBName";
-            this.txtDBName.Size = new System.Drawing.Size(130, 23);
+            this.txtDBName.Size = new System.Drawing.Size(232, 23);
             this.txtDBName.TabIndex = 5;
             // 
             // txtServerName
             // 
-            this.txtServerName.Location = new System.Drawing.Point(232, 133);
+            this.txtServerName.Location = new System.Drawing.Point(197, 135);
             this.txtServerName.Name = "txtServerName";
-            this.txtServerName.Size = new System.Drawing.Size(130, 23);
+            this.txtServerName.Size = new System.Drawing.Size(232, 23);
             this.txtServerName.TabIndex = 4;
-            // 
-            // lblDBname
-            // 
-            this.lblDBname.AutoSize = true;
-            this.lblDBname.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.lblDBname.Location = new System.Drawing.Point(124, 181);
-            this.lblDBname.Name = "lblDBname";
-            this.lblDBname.Size = new System.Drawing.Size(66, 19);
-            this.lblDBname.TabIndex = 5;
-            this.lblDBname.Text = "Database";
-            this.lblDBname.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblServerName
             // 
             this.lblServerName.AutoSize = true;
-            this.lblServerName.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.lblServerName.Location = new System.Drawing.Point(143, 133);
+            this.lblServerName.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblServerName.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lblServerName.Location = new System.Drawing.Point(86, 133);
             this.lblServerName.Name = "lblServerName";
-            this.lblServerName.Size = new System.Drawing.Size(47, 19);
+            this.lblServerName.Size = new System.Drawing.Size(67, 25);
             this.lblServerName.TabIndex = 2;
             this.lblServerName.Text = "Server";
             this.lblServerName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel1.Location = new System.Drawing.Point(86, 181);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(92, 25);
+            this.metroLabel1.TabIndex = 8;
+            this.metroLabel1.Text = "DataBase";
+            this.metroLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtCustomString
+            // 
+            this.txtCustomString.Location = new System.Drawing.Point(71, 256);
+            this.txtCustomString.Name = "txtCustomString";
+            this.txtCustomString.Size = new System.Drawing.Size(358, 23);
+            this.txtCustomString.TabIndex = 9;
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel2.Location = new System.Drawing.Point(71, 234);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(97, 19);
+            this.metroLabel2.TabIndex = 10;
+            this.metroLabel2.Text = "Custom String";
+            this.metroLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Index
             // 
@@ -131,9 +155,11 @@
         private MetroFramework.Controls.MetroPanel metroPanel1;
         private MetroFramework.Controls.MetroTextBox txtDBName;
         private MetroFramework.Controls.MetroTextBox txtServerName;
-        private MetroFramework.Controls.MetroLabel lblDBname;
         private MetroFramework.Controls.MetroLabel lblServerName;
         private System.Windows.Forms.Button btnBackup;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
+        private MetroFramework.Controls.MetroTextBox txtCustomString;
     }
 }
 
