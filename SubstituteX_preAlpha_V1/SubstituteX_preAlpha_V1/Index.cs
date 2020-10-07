@@ -18,10 +18,11 @@ namespace SubstituteX_preAlpha_V1
         string connectionString;
         string serverName = "";
         string databaseName = "";
+        int Interval = 0;
         public Index()
         {
-          
             InitializeComponent();
+            PanelSecheduler.Visible = false;
         }
         public static string getBetween(string strSource, string strStart, string strEnd)
         {
@@ -91,6 +92,19 @@ namespace SubstituteX_preAlpha_V1
 
             MessageBox.Show("Done!");
             
+        }
+
+        private void btnScheduler_Click(object sender, EventArgs e)
+        {
+            PanelSecheduler.Visible = true;
+        }
+
+        private void btnStartSchedule_Click(object sender, EventArgs e)
+        {
+            Interval = int.Parse(txtInterval.Text);
+            BackupTimer.Interval = Interval * 60000;
+            lblSchedulerStatus.Text = "Running";
+
         }
     }
 }
