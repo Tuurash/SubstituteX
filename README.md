@@ -1,5 +1,5 @@
 # SubstituteX
-A Database Backup Tool  
+A small SQL Database Backup Tool.
 #### Deployed
 - Database Backup on Click
 - Schedule Backup(update)
@@ -14,3 +14,5 @@ A Database Backup Tool
 - compare databases
 - create log
 - Not Given Thought yet :)
+
+Expecting To Include Premium Features in the prospect. :)
