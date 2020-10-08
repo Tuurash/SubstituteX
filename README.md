@@ -9,7 +9,7 @@ A Database Backup Tool
 - Multiple Flies while mode is Auto Update(sometimes)
 - UI
 - Servers with Password(UI)  
-####Planned
+####Planned  
 - restoration on click
 - compare databases
 - create log
