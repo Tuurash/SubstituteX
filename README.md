@@ -8,7 +8,7 @@ A Database Backup Tool
 - Destination
 - Multiple Flies while mode is Auto Update(sometimes)
 - UI
-- Servers with Password(UI)
+- Servers with Password(UI)  
 ####Planned
 - restoration on click
 - compare databases
