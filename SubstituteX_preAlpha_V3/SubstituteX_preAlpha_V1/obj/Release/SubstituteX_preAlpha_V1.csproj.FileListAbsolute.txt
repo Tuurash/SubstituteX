@@ -1,0 +1,13 @@
+C:\Users\Turash\Source\Repos\Tuurash\SubstituteX\SubstituteX_preAlpha_V3\SubstituteX_preAlpha_V1\bin\Release\SubstituteX_preAlpha_V1.exe.config
+C:\Users\Turash\Source\Repos\Tuurash\SubstituteX\SubstituteX_preAlpha_V3\SubstituteX_preAlpha_V1\bin\Release\SubstituteX_preAlpha_V1.exe
+C:\Users\Turash\Source\Repos\Tuurash\SubstituteX\SubstituteX_preAlpha_V3\SubstituteX_preAlpha_V1\bin\Release\SubstituteX_preAlpha_V1.pdb
+C:\Users\Turash\Source\Repos\Tuurash\SubstituteX\SubstituteX_preAlpha_V3\SubstituteX_preAlpha_V1\bin\Release\MetroFramework.dll
+C:\Users\Turash\Source\Repos\Tuurash\SubstituteX\SubstituteX_preAlpha_V3\SubstituteX_preAlpha_V1\bin\Release\MetroFramework.Fonts.dll
+C:\Users\Turash\Source\Repos\Tuurash\SubstituteX\SubstituteX_preAlpha_V3\SubstituteX_preAlpha_V1\obj\Release\SubstituteX_preAlpha_V1.csprojAssemblyReference.cache
+C:\Users\Turash\Source\Repos\Tuurash\SubstituteX\SubstituteX_preAlpha_V3\SubstituteX_preAlpha_V1\obj\Release\SubstituteX_preAlpha_V1.Index.resources
+C:\Users\Turash\Source\Repos\Tuurash\SubstituteX\SubstituteX_preAlpha_V3\SubstituteX_preAlpha_V1\obj\Release\SubstituteX_preAlpha_V1.Properties.Resources.resources
+C:\Users\Turash\Source\Repos\Tuurash\SubstituteX\SubstituteX_preAlpha_V3\SubstituteX_preAlpha_V1\obj\Release\SubstituteX_preAlpha_V1.csproj.GenerateResource.cache
+C:\Users\Turash\Source\Repos\Tuurash\SubstituteX\SubstituteX_preAlpha_V3\SubstituteX_preAlpha_V1\obj\Release\SubstituteX_preAlpha_V1.csproj.CoreCompileInputs.cache
+C:\Users\Turash\Source\Repos\Tuurash\SubstituteX\SubstituteX_preAlpha_V3\SubstituteX_preAlpha_V1\obj\Release\SubstituteX_preAlpha_V1.csproj.CopyComplete
+C:\Users\Turash\Source\Repos\Tuurash\SubstituteX\SubstituteX_preAlpha_V3\SubstituteX_preAlpha_V1\obj\Release\SubstituteX_preAlpha_V1.exe
+C:\Users\Turash\Source\Repos\Tuurash\SubstituteX\SubstituteX_preAlpha_V3\SubstituteX_preAlpha_V1\obj\Release\SubstituteX_preAlpha_V1.pdb
