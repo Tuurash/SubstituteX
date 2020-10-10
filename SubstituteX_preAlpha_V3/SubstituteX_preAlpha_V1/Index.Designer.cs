@@ -29,8 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Index));
             this.metroUserControl1 = new MetroFramework.Controls.MetroUserControl();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.chkHasPass = new MetroFramework.Controls.MetroCheckBox();
+            this.btnBrowse = new MetroFramework.Controls.MetroButton();
+            this.txtBrowse = new MetroFramework.Controls.MetroTextBox();
             this.btnScheduler = new MetroFramework.Controls.MetroButton();
             this.PanelSecheduler = new MetroFramework.Controls.MetroPanel();
             this.lblSchedulerStatus = new System.Windows.Forms.Label();
@@ -46,9 +50,6 @@
             this.txtServerName = new MetroFramework.Controls.MetroTextBox();
             this.lblServerName = new MetroFramework.Controls.MetroLabel();
             this.BackupTimer = new System.Windows.Forms.Timer(this.components);
-            this.txtBrowse = new MetroFramework.Controls.MetroTextBox();
-            this.btnBrowse = new MetroFramework.Controls.MetroButton();
-            this.chkHasPass = new MetroFramework.Controls.MetroCheckBox();
             this.PanelAuthentication = new MetroFramework.Controls.MetroPanel();
             this.lblPassword = new MetroFramework.Controls.MetroLabel();
             this.txtPass = new MetroFramework.Controls.MetroTextBox();
@@ -83,16 +84,44 @@
             this.metroPanel1.Controls.Add(this.txtDBName);
             this.metroPanel1.Controls.Add(this.txtServerName);
             this.metroPanel1.Controls.Add(this.lblServerName);
+            this.metroPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(23, 29);
+            this.metroPanel1.Location = new System.Drawing.Point(23, 37);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(507, 441);
+            this.metroPanel1.Size = new System.Drawing.Size(481, 456);
             this.metroPanel1.TabIndex = 1;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
+            // 
+            // chkHasPass
+            // 
+            this.chkHasPass.AutoSize = true;
+            this.chkHasPass.Location = new System.Drawing.Point(335, 151);
+            this.chkHasPass.Name = "chkHasPass";
+            this.chkHasPass.Size = new System.Drawing.Size(126, 15);
+            this.chkHasPass.TabIndex = 16;
+            this.chkHasPass.Text = "SQL Authentication";
+            this.chkHasPass.UseVisualStyleBackColor = true;
+            this.chkHasPass.CheckedChanged += new System.EventHandler(this.chkHasPass_CheckedChanged);
+            // 
+            // btnBrowse
+            // 
+            this.btnBrowse.Location = new System.Drawing.Point(346, 229);
+            this.btnBrowse.Name = "btnBrowse";
+            this.btnBrowse.Size = new System.Drawing.Size(83, 23);
+            this.btnBrowse.TabIndex = 15;
+            this.btnBrowse.Text = "Browse";
+            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
+            // 
+            // txtBrowse
+            // 
+            this.txtBrowse.Location = new System.Drawing.Point(71, 229);
+            this.txtBrowse.Name = "txtBrowse";
+            this.txtBrowse.Size = new System.Drawing.Size(269, 23);
+            this.txtBrowse.TabIndex = 14;
             // 
             // btnScheduler
             // 
@@ -238,33 +267,6 @@
             // 
             this.BackupTimer.Tick += new System.EventHandler(this.BackupTimer_Tick);
             // 
-            // txtBrowse
-            // 
-            this.txtBrowse.Location = new System.Drawing.Point(71, 229);
-            this.txtBrowse.Name = "txtBrowse";
-            this.txtBrowse.Size = new System.Drawing.Size(269, 23);
-            this.txtBrowse.TabIndex = 14;
-            // 
-            // btnBrowse
-            // 
-            this.btnBrowse.Location = new System.Drawing.Point(346, 229);
-            this.btnBrowse.Name = "btnBrowse";
-            this.btnBrowse.Size = new System.Drawing.Size(83, 23);
-            this.btnBrowse.TabIndex = 15;
-            this.btnBrowse.Text = "Browse";
-            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
-            // 
-            // chkHasPass
-            // 
-            this.chkHasPass.AutoSize = true;
-            this.chkHasPass.Location = new System.Drawing.Point(335, 151);
-            this.chkHasPass.Name = "chkHasPass";
-            this.chkHasPass.Size = new System.Drawing.Size(96, 15);
-            this.chkHasPass.TabIndex = 16;
-            this.chkHasPass.Text = "Has Password";
-            this.chkHasPass.UseVisualStyleBackColor = true;
-            this.chkHasPass.CheckedChanged += new System.EventHandler(this.chkHasPass_CheckedChanged);
-            // 
             // PanelAuthentication
             // 
             this.PanelAuthentication.Controls.Add(this.lblPassword);
@@ -276,10 +278,10 @@
             this.PanelAuthentication.HorizontalScrollbarBarColor = true;
             this.PanelAuthentication.HorizontalScrollbarHighlightOnWheel = false;
             this.PanelAuthentication.HorizontalScrollbarSize = 10;
-            this.PanelAuthentication.Location = new System.Drawing.Point(50, 4);
+            this.PanelAuthentication.Location = new System.Drawing.Point(51, 4);
             this.PanelAuthentication.Name = "PanelAuthentication";
-            this.PanelAuthentication.Size = new System.Drawing.Size(392, 219);
-            this.PanelAuthentication.TabIndex = 18;
+            this.PanelAuthentication.Size = new System.Drawing.Size(410, 219);
+            this.PanelAuthentication.TabIndex = 19;
             this.PanelAuthentication.VerticalScrollbarBarColor = true;
             this.PanelAuthentication.VerticalScrollbarHighlightOnWheel = false;
             this.PanelAuthentication.VerticalScrollbarSize = 10;
@@ -337,15 +339,15 @@
             this.btnConnect.Size = new System.Drawing.Size(100, 23);
             this.btnConnect.TabIndex = 6;
             this.btnConnect.Text = "Connect";
-            this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
             // 
             // Index
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(553, 493);
+            this.ClientSize = new System.Drawing.Size(534, 592);
             this.Controls.Add(this.metroPanel1);
             this.Controls.Add(this.metroUserControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Index";
             this.ShadowType = MetroFramework.Forms.MetroForm.MetroFormShadowType.SystemShadow;
             this.metroPanel1.ResumeLayout(false);

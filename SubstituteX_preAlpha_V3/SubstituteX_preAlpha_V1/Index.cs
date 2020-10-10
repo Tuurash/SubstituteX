@@ -29,6 +29,7 @@ namespace SubstituteX_preAlpha_V1
             PanelSecheduler.Visible = false;
             btnBackup.Enabled = false;
             PanelAuthentication.Visible = false;
+        
         }
         public static string getBetween(string strSource, string strStart, string strEnd)
         {
@@ -187,5 +188,7 @@ namespace SubstituteX_preAlpha_V1
             }
             catch (Exception ConnectionExc) { }
         }
+
+  
     }
 }
