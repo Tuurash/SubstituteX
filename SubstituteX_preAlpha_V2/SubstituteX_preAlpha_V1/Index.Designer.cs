@@ -46,6 +46,8 @@
             this.txtServerName = new MetroFramework.Controls.MetroTextBox();
             this.lblServerName = new MetroFramework.Controls.MetroLabel();
             this.BackupTimer = new System.Windows.Forms.Timer(this.components);
+            this.txtBrowse = new MetroFramework.Controls.MetroTextBox();
+            this.btnBrowse = new MetroFramework.Controls.MetroButton();
             this.metroPanel1.SuspendLayout();
             this.PanelSecheduler.SuspendLayout();
             this.SuspendLayout();
@@ -59,6 +61,8 @@
             // 
             // metroPanel1
             // 
+            this.metroPanel1.Controls.Add(this.btnBrowse);
+            this.metroPanel1.Controls.Add(this.txtBrowse);
             this.metroPanel1.Controls.Add(this.btnScheduler);
             this.metroPanel1.Controls.Add(this.PanelSecheduler);
             this.metroPanel1.Controls.Add(this.metroLabel2);
@@ -156,7 +160,7 @@
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel2.Location = new System.Drawing.Point(71, 228);
+            this.metroLabel2.Location = new System.Drawing.Point(73, 159);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(125, 25);
             this.metroLabel2.TabIndex = 10;
@@ -165,7 +169,7 @@
             // 
             // txtCustomString
             // 
-            this.txtCustomString.Location = new System.Drawing.Point(71, 256);
+            this.txtCustomString.Location = new System.Drawing.Point(73, 187);
             this.txtCustomString.Name = "txtCustomString";
             this.txtCustomString.Size = new System.Drawing.Size(358, 23);
             this.txtCustomString.TabIndex = 9;
@@ -174,10 +178,10 @@
             // 
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel1.Location = new System.Drawing.Point(86, 181);
+            this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel1.Location = new System.Drawing.Point(88, 120);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(92, 25);
+            this.metroLabel1.Size = new System.Drawing.Size(85, 25);
             this.metroLabel1.TabIndex = 8;
             this.metroLabel1.Text = "DataBase";
             this.metroLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -195,14 +199,14 @@
             // 
             // txtDBName
             // 
-            this.txtDBName.Location = new System.Drawing.Point(197, 183);
+            this.txtDBName.Location = new System.Drawing.Point(199, 122);
             this.txtDBName.Name = "txtDBName";
             this.txtDBName.Size = new System.Drawing.Size(232, 23);
             this.txtDBName.TabIndex = 5;
             // 
             // txtServerName
             // 
-            this.txtServerName.Location = new System.Drawing.Point(197, 135);
+            this.txtServerName.Location = new System.Drawing.Point(199, 74);
             this.txtServerName.Name = "txtServerName";
             this.txtServerName.Size = new System.Drawing.Size(232, 23);
             this.txtServerName.TabIndex = 4;
@@ -211,10 +215,10 @@
             // 
             this.lblServerName.AutoSize = true;
             this.lblServerName.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblServerName.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblServerName.Location = new System.Drawing.Point(86, 133);
+            this.lblServerName.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lblServerName.Location = new System.Drawing.Point(88, 72);
             this.lblServerName.Name = "lblServerName";
-            this.lblServerName.Size = new System.Drawing.Size(67, 25);
+            this.lblServerName.Size = new System.Drawing.Size(61, 25);
             this.lblServerName.TabIndex = 2;
             this.lblServerName.Text = "Server";
             this.lblServerName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -222,6 +226,22 @@
             // BackupTimer
             // 
             this.BackupTimer.Tick += new System.EventHandler(this.BackupTimer_Tick);
+            // 
+            // txtBrowse
+            // 
+            this.txtBrowse.Location = new System.Drawing.Point(71, 229);
+            this.txtBrowse.Name = "txtBrowse";
+            this.txtBrowse.Size = new System.Drawing.Size(269, 23);
+            this.txtBrowse.TabIndex = 14;
+            // 
+            // btnBrowse
+            // 
+            this.btnBrowse.Location = new System.Drawing.Point(346, 229);
+            this.btnBrowse.Name = "btnBrowse";
+            this.btnBrowse.Size = new System.Drawing.Size(83, 23);
+            this.btnBrowse.TabIndex = 15;
+            this.btnBrowse.Text = "Browse";
+            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
             // 
             // Index
             // 
@@ -259,6 +279,8 @@
         private System.Windows.Forms.Timer BackupTimer;
         private System.Windows.Forms.Label lblSchedulerStatus;
         private MetroFramework.Controls.MetroButton btnScheduler;
+        private MetroFramework.Controls.MetroButton btnBrowse;
+        private MetroFramework.Controls.MetroTextBox txtBrowse;
     }
 }
 

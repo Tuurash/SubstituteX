@@ -19,11 +19,13 @@ namespace SubstituteX_preAlpha_V1
         string serverName = "";
         string databaseName = "";
         int Interval = 0;
+        string Directiory = "";
 
         public Index()
         {
             InitializeComponent();
             PanelSecheduler.Visible = false;
+            btnBackup.Enabled = false;
         }
         public static string getBetween(string strSource, string strStart, string strEnd)
         {
@@ -37,8 +39,17 @@ namespace SubstituteX_preAlpha_V1
             return "";
         }
 
-        #region BackupRegion
+        private void btnBrowse_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog browserDialog = new FolderBrowserDialog();
+            if (browserDialog.ShowDialog() == DialogResult.OK)
+            {
+                txtBrowse.Text = browserDialog.SelectedPath;
+                btnBackup.Enabled = true;
+            }
+        }
 
+        #region Connection
         public SqlConnection Connection()
         {
             char trimChars = '"';
@@ -81,18 +92,25 @@ namespace SubstituteX_preAlpha_V1
                 da.Fill(dt);
             }
             return dt;
-        }
+        } 
+        #endregion
 
+        #region BackupRegion
         private void CreateBackup()
         {
-            Connection();
-            DateTime d = DateTime.Now;
-            string dd = d.Day + "." + d.Month+"."+d.Second;
-            string query_1 = "use " + databaseName + ";";
-            string query_2 = @"BACKUP DATABASE " + databaseName + " To DISK= 'D:\\DatabaseBackups\\" + databaseName + " _" + dd + ".bak' with format,Medianame='Z_SQLServerBackups',Name='FullBackUp_" + databaseName + "';";
+            Directiory = txtBrowse.Text;
+            try
+            {
+                Connection();
+                DateTime d = DateTime.Now;
+                string dd = d.Day + "." + d.Month + "." + d.Second;
+                string query_1 = "use " + databaseName + ";";
+                string query_2 = @"BACKUP DATABASE " + databaseName + " To DISK= '"+Directiory+"\\" + databaseName + " _" + dd + ".bak' with format,Medianame='Z_SQLServerBackups',Name='FullBackUp_" + databaseName + "';";
 
-            ExecuteNonQuery(query_1);
-            ExecuteNonQuery(query_2);
+                ExecuteNonQuery(query_1);
+                ExecuteNonQuery(query_2);
+            }
+            catch(Exception exc) { }
         }
         private void btnBackup_Click(object sender, EventArgs e)
         {
@@ -130,8 +148,9 @@ namespace SubstituteX_preAlpha_V1
             PanelSecheduler.Visible = false;
         }
 
+
         #endregion
 
-
+        
     }
 }
