@@ -8,6 +8,7 @@ A small SQL Database Backup Tool.
 - Fixed Multiple Saves
 - Other Bugs
 ##### [v1.0.0-alpha.0](https://github.com/Tuurash/SubstituteX/raw/main/Releases/SubstituteX%20v1.0.0-alpha.0.exe)
+- not an actual release
 
 
 #### Deployed
