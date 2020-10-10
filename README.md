@@ -1,8 +1,12 @@
 # SubstituteX
 A small SQL Database Backup Tool.
 
-### Releases
-##### [v1.0.0-alpha.1.exe](https://github.com/Tuurash/SubstituteX/raw/main/Releases/SubstituteX%20v1.0.0-alpha.1.exe)
+### Releases (exe)
+##### [v1.0.0-alpha.1](https://github.com/Tuurash/SubstituteX/raw/main/Releases/SubstituteX%20v1.0.0-alpha.1.exe)
+- Sql Server Auth
+- Fixed Directory
+- Fixed Multiple Saves
+- Other Bugs
 ##### [v1.0.0-alpha.0](https://github.com/Tuurash/SubstituteX/raw/main/Releases/SubstituteX%20v1.0.0-alpha.0.exe)
 
 
@@ -13,7 +17,7 @@ A small SQL Database Backup Tool.
 - Sql Server Authentication
 #### Need Fix
 - ~~Destination~~
-- Multiple Flies while mode is Auto Update(sometimes)
+- ~~Multiple Flies while mode is Auto Update(sometimes)~~
 - UI
 - Servers with Password(UI)  
 #### Planned  
