@@ -2,7 +2,8 @@
 A small SQL Database Backup Tool.
 
 ### Releases
-##### [v1.0.0-alpha.1.exe](https://github.com/Tuurash/SubstituteX/blob/main/Releases/SubstituteX%20v1.0.0-alpha.1.exe)
+##### [v1.0.0-alpha.1.exe](https://github.com/Tuurash/SubstituteX/raw/main/Releases/SubstituteX%20v1.0.0-alpha.1.exe)
+##### [v1.0.0-alpha.0](https://github.com/Tuurash/SubstituteX/raw/main/Releases/SubstituteX%20v1.0.0-alpha.0.exe)
 
 
 #### Deployed
