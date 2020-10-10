@@ -48,8 +48,17 @@
             this.BackupTimer = new System.Windows.Forms.Timer(this.components);
             this.txtBrowse = new MetroFramework.Controls.MetroTextBox();
             this.btnBrowse = new MetroFramework.Controls.MetroButton();
+            this.chkHasPass = new MetroFramework.Controls.MetroCheckBox();
+            this.PanelAuthentication = new MetroFramework.Controls.MetroPanel();
+            this.lblPassword = new MetroFramework.Controls.MetroLabel();
+            this.txtPass = new MetroFramework.Controls.MetroTextBox();
+            this.txtUserName = new MetroFramework.Controls.MetroTextBox();
+            this.lblUserName = new MetroFramework.Controls.MetroLabel();
+            this.btnClose = new MetroFramework.Controls.MetroButton();
+            this.btnConnect = new MetroFramework.Controls.MetroButton();
             this.metroPanel1.SuspendLayout();
             this.PanelSecheduler.SuspendLayout();
+            this.PanelAuthentication.SuspendLayout();
             this.SuspendLayout();
             // 
             // metroUserControl1
@@ -61,6 +70,8 @@
             // 
             // metroPanel1
             // 
+            this.metroPanel1.Controls.Add(this.PanelAuthentication);
+            this.metroPanel1.Controls.Add(this.chkHasPass);
             this.metroPanel1.Controls.Add(this.btnBrowse);
             this.metroPanel1.Controls.Add(this.txtBrowse);
             this.metroPanel1.Controls.Add(this.btnScheduler);
@@ -160,7 +171,7 @@
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel2.Location = new System.Drawing.Point(73, 159);
+            this.metroLabel2.Location = new System.Drawing.Point(71, 159);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(125, 25);
             this.metroLabel2.TabIndex = 10;
@@ -179,7 +190,7 @@
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel1.Location = new System.Drawing.Point(88, 120);
+            this.metroLabel1.Location = new System.Drawing.Point(73, 120);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(85, 25);
             this.metroLabel1.TabIndex = 8;
@@ -216,7 +227,7 @@
             this.lblServerName.AutoSize = true;
             this.lblServerName.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.lblServerName.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.lblServerName.Location = new System.Drawing.Point(88, 72);
+            this.lblServerName.Location = new System.Drawing.Point(73, 72);
             this.lblServerName.Name = "lblServerName";
             this.lblServerName.Size = new System.Drawing.Size(61, 25);
             this.lblServerName.TabIndex = 2;
@@ -243,6 +254,91 @@
             this.btnBrowse.Text = "Browse";
             this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
             // 
+            // chkHasPass
+            // 
+            this.chkHasPass.AutoSize = true;
+            this.chkHasPass.Location = new System.Drawing.Point(335, 151);
+            this.chkHasPass.Name = "chkHasPass";
+            this.chkHasPass.Size = new System.Drawing.Size(96, 15);
+            this.chkHasPass.TabIndex = 16;
+            this.chkHasPass.Text = "Has Password";
+            this.chkHasPass.UseVisualStyleBackColor = true;
+            this.chkHasPass.CheckedChanged += new System.EventHandler(this.chkHasPass_CheckedChanged);
+            // 
+            // PanelAuthentication
+            // 
+            this.PanelAuthentication.Controls.Add(this.lblPassword);
+            this.PanelAuthentication.Controls.Add(this.txtPass);
+            this.PanelAuthentication.Controls.Add(this.txtUserName);
+            this.PanelAuthentication.Controls.Add(this.lblUserName);
+            this.PanelAuthentication.Controls.Add(this.btnClose);
+            this.PanelAuthentication.Controls.Add(this.btnConnect);
+            this.PanelAuthentication.HorizontalScrollbarBarColor = true;
+            this.PanelAuthentication.HorizontalScrollbarHighlightOnWheel = false;
+            this.PanelAuthentication.HorizontalScrollbarSize = 10;
+            this.PanelAuthentication.Location = new System.Drawing.Point(50, 4);
+            this.PanelAuthentication.Name = "PanelAuthentication";
+            this.PanelAuthentication.Size = new System.Drawing.Size(392, 219);
+            this.PanelAuthentication.TabIndex = 18;
+            this.PanelAuthentication.VerticalScrollbarBarColor = true;
+            this.PanelAuthentication.VerticalScrollbarHighlightOnWheel = false;
+            this.PanelAuthentication.VerticalScrollbarSize = 10;
+            // 
+            // lblPassword
+            // 
+            this.lblPassword.AutoSize = true;
+            this.lblPassword.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblPassword.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lblPassword.Location = new System.Drawing.Point(21, 116);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(87, 25);
+            this.lblPassword.TabIndex = 12;
+            this.lblPassword.Text = "Password";
+            this.lblPassword.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtPass
+            // 
+            this.txtPass.Location = new System.Drawing.Point(124, 118);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(248, 23);
+            this.txtPass.TabIndex = 11;
+            // 
+            // txtUserName
+            // 
+            this.txtUserName.Location = new System.Drawing.Point(124, 70);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Size = new System.Drawing.Size(248, 23);
+            this.txtUserName.TabIndex = 10;
+            // 
+            // lblUserName
+            // 
+            this.lblUserName.AutoSize = true;
+            this.lblUserName.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblUserName.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lblUserName.Location = new System.Drawing.Point(19, 68);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(99, 25);
+            this.lblUserName.TabIndex = 9;
+            this.lblUserName.Text = "User Name";
+            this.lblUserName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Location = new System.Drawing.Point(320, 183);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(59, 23);
+            this.btnClose.TabIndex = 7;
+            this.btnClose.Text = "Back";
+            // 
+            // btnConnect
+            // 
+            this.btnConnect.Location = new System.Drawing.Point(21, 183);
+            this.btnConnect.Name = "btnConnect";
+            this.btnConnect.Size = new System.Drawing.Size(100, 23);
+            this.btnConnect.TabIndex = 6;
+            this.btnConnect.Text = "Connect";
+            this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
+            // 
             // Index
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -256,6 +352,8 @@
             this.metroPanel1.PerformLayout();
             this.PanelSecheduler.ResumeLayout(false);
             this.PanelSecheduler.PerformLayout();
+            this.PanelAuthentication.ResumeLayout(false);
+            this.PanelAuthentication.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -281,6 +379,14 @@
         private MetroFramework.Controls.MetroButton btnScheduler;
         private MetroFramework.Controls.MetroButton btnBrowse;
         private MetroFramework.Controls.MetroTextBox txtBrowse;
+        private MetroFramework.Controls.MetroCheckBox chkHasPass;
+        private MetroFramework.Controls.MetroPanel PanelAuthentication;
+        private MetroFramework.Controls.MetroLabel lblPassword;
+        private MetroFramework.Controls.MetroTextBox txtPass;
+        private MetroFramework.Controls.MetroTextBox txtUserName;
+        private MetroFramework.Controls.MetroLabel lblUserName;
+        private MetroFramework.Controls.MetroButton btnClose;
+        private MetroFramework.Controls.MetroButton btnConnect;
     }
 }
 

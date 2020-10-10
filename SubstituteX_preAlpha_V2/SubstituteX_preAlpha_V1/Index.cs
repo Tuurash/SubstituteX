@@ -20,12 +20,15 @@ namespace SubstituteX_preAlpha_V1
         string databaseName = "";
         int Interval = 0;
         string Directiory = "";
+        string UserName = "";
+        string Password = "";
 
         public Index()
         {
             InitializeComponent();
             PanelSecheduler.Visible = false;
             btnBackup.Enabled = false;
+            PanelAuthentication.Visible = false;
         }
         public static string getBetween(string strSource, string strStart, string strEnd)
         {
@@ -55,9 +58,18 @@ namespace SubstituteX_preAlpha_V1
             char trimChars = '"';
             serverName = txtServerName.Text;
             databaseName = txtDBName.Text;
+            UserName = txtUserName.Text;
+            Password = txtPass.Text;
             if (serverName != "" && databaseName != "")
             {
-                connectionString = @"Data Source=" + serverName + "; Integrated Security=True; Initial Catalog=" + databaseName + ";";
+                if (chkHasPass.Checked == false)
+                {
+                    connectionString = @"Data Source=" + serverName + "; Integrated Security=True; Initial Catalog=" + databaseName + ";";
+                }
+                else
+                {
+                    connectionString = @"Data Source=" + serverName + "; Integrated Security=True; Initial Catalog=" + databaseName + "; User Id="+UserName+"; Password="+Password+";";
+                }
             }
             else
             {
@@ -101,14 +113,16 @@ namespace SubstituteX_preAlpha_V1
             Directiory = txtBrowse.Text;
             try
             {
-                Connection();
                 DateTime d = DateTime.Now;
                 string dd = d.Day + "." + d.Month + "." + d.Second;
-                string query_1 = "use " + databaseName + ";";
-                string query_2 = @"BACKUP DATABASE " + databaseName + " To DISK= '"+Directiory+"\\" + databaseName + " _" + dd + ".bak' with format,Medianame='Z_SQLServerBackups',Name='FullBackUp_" + databaseName + "';";
+               
+                    Connection();
+                    
+                    string query_1 = "use " + databaseName + ";";
+                    string query_2 = @"BACKUP DATABASE " + databaseName + " To DISK= '" + Directiory + "\\" + databaseName + " _" + dd + ".bak' with format,Medianame='Z_SQLServerBackups',Name='FullBackUp_" + databaseName + "';";
 
-                ExecuteNonQuery(query_1);
-                ExecuteNonQuery(query_2);
+                    ExecuteNonQuery(query_1);
+                    ExecuteNonQuery(query_2);
             }
             catch(Exception exc) { }
         }
@@ -149,8 +163,29 @@ namespace SubstituteX_preAlpha_V1
         }
 
 
+
         #endregion
 
-        
+        private void chkHasPass_CheckedChanged(object sender, EventArgs e)
+        {
+            PanelAuthentication.Visible = true;
+            
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            chkHasPass.Checked = false;
+            PanelAuthentication.Visible = false;
+        }
+
+        private void btnConnect_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Connection();
+                MessageBox.Show("Connection Established!");
+            }
+            catch (Exception ConnectionExc) { }
+        }
     }
 }
