@@ -5,7 +5,7 @@ A small SQL Database Backup Tool.
 - Schedule Backup(update)
 - set Update interval
 #### Need Fix
-- Destination
+- ~~.Destination
 - Multiple Flies while mode is Auto Update(sometimes)
 - UI
 - Servers with Password(UI)  
