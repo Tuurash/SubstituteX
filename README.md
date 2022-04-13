@@ -1,4 +1,4 @@
-<img src="https://github.com/Tuurash/SubstituteX/blob/main/Icon/SubstituteX.png" width="200" height="400" />
+<img src="https://github.com/Tuurash/SubstituteX/blob/main/Icon/SubstituteX.png" width="150" height="150" />
 
 
 # SubstituteX
