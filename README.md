@@ -2,7 +2,7 @@
 <p align="center">
   <img align="center" src="https://github.com/Tuurash/SubstituteX/blob/main/Icon/SubstituteX.png" width="160" height="160" />
 </p>
-<h1 align="center">SubstituteX</h1>  
+<h2 align="center">SubstituteX</h2>  
 <h5 align="center">
   A Small simple SQL Database Backup Tool
 </h5>
