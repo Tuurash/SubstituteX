@@ -1,3 +1,6 @@
+<img src="https://github.com/Tuurash/SubstituteX/blob/main/Icon/SubstituteX.png" width="200" height="400" />
+
+
 # SubstituteX
  
 <img align="center" src="https://github.com/Tuurash/SubstituteX/blob/main/Icon/SubstituteX.png" /> ...... A small SQL Database Backup Tool. 
