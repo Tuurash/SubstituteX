@@ -4,16 +4,6 @@
 </p>
 <h1 align="center">SubstituteX</h1>  
 
-### Releases (exe)
-##### [v1.0.0-alpha.1](https://github.com/Tuurash/SubstituteX/raw/main/Releases/SubstituteX%20v1.0.0-alpha.1.exe)
-- Sql Server Auth
-- Fixed Directory
-- Fixed Multiple Saves
-- Other Bugs
-##### [v1.0.0-alpha.0](https://github.com/Tuurash/SubstituteX/raw/main/Releases/SubstituteX%20v1.0.0-alpha.0.exe)
-- not an actual release
-
-
 #### Deployed
 - Database Backup on Click
 - Schedule Backup(update)
