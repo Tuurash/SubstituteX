@@ -1,8 +1,8 @@
-<img src="https://github.com/Tuurash/SubstituteX/blob/main/Icon/SubstituteX.png" width="160" height="160" align="center" />
 
-
-# SubstituteX
- 
+<p align="center">
+  <img align="center" src="https://github.com/Tuurash/SubstituteX/blob/main/Icon/SubstituteX.png" width="160" height="160" />
+</p>
+<h1 align="center">SubstituteX</h1>  
 
 ### Releases (exe)
 ##### [v1.0.0-alpha.1](https://github.com/Tuurash/SubstituteX/raw/main/Releases/SubstituteX%20v1.0.0-alpha.1.exe)
