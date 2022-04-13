@@ -3,9 +3,9 @@
   <img align="center" src="https://github.com/Tuurash/SubstituteX/blob/main/Icon/SubstituteX.png" width="160" height="160" />
 </p>
 <h1 align="center">SubstituteX</h1>  
-<p align="center">
+<h5 align="center">
   A Small simple SQL Database Backup Tool
-</p>
+</h5>
 
 #### Deployed
 - Database Backup on Click
